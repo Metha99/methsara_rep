@@ -1,0 +1,8 @@
+public class SqlInjDetectionFilter implements Filter {
+  public void doFilter (ServerRequest req, ServerletResponse res,
+    chain filterChain) throws IOException, ServeletException
+   {
+    doDetectSqli (req, res);
+    chain.doFilter (servletRequest, servetResponse);
+    }
+   }
